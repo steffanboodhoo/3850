@@ -1,6 +1,7 @@
 package objects;
 
 import globals.Attributes;
+import globals.Attributes.Colour;
 import globals.Attributes.Country;
 import globals.Attributes.Smell;
 import globals.Attributes.Taste;
@@ -17,6 +18,7 @@ public class Cheese implements Comparable<Cheese>{
 	private ArrayList<Country> countries;
 	private ArrayList<Smell> smells;
 	private ArrayList<Taste> tastes;
+	private ArrayList<Colour> colours;
 	private int accuracy;
 	
 	
@@ -82,6 +84,16 @@ public class Cheese implements Comparable<Cheese>{
 		for(String t:cTexts){
 			for(Smell sm:smells){
 				if(t.equalsIgnoreCase(sm.toString()))
+					count++;
+			}
+		}
+		setAccuracy(getAccuracy() + count*Attributes.bigFields);
+	}
+	public void checkColours(String[] cTexts){
+		int count=0;
+		for(String t:cTexts){
+			for(Colour cr:colours){
+				if(t.equalsIgnoreCase(cr.toString()))
 					count++;
 			}
 		}
