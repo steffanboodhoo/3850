@@ -1,8 +1,10 @@
 package objects;
 
 import globals.Attributes;
+import globals.Attributes.Animal;
 import globals.Attributes.Colour;
 import globals.Attributes.Country;
+import globals.Attributes.Pasturized;
 import globals.Attributes.Smell;
 import globals.Attributes.Taste;
 import globals.Attributes.Texture;
@@ -12,22 +14,32 @@ import java.util.ArrayList;
 
 public class Cheese implements Comparable<Cheese>{
 	private String name;
-	private Boolean Pasturized;
+	private Pasturized pasturized;
+	private Boolean Vegetarian;
 	private ArrayList<Texture> textures;
 	private ArrayList<Variety> varieties;
 	private ArrayList<Country> countries;
 	private ArrayList<Smell> smells;
 	private ArrayList<Taste> tastes;
 	private ArrayList<Colour> colours;
+	private ArrayList<Animal> animals;
 	private int accuracy;
 	
 	
-	public Cheese(String name, Boolean pasturized, ArrayList<Texture> textures,
-			ArrayList<Variety> varieties, ArrayList<Country> countries,
-			ArrayList<Smell> smells, ArrayList<Taste> tastes) {
+	public Cheese(String name, Pasturized pasturized,
+			ArrayList<Animal> animals,
+			ArrayList<Country> countries,
+			ArrayList<Variety> varieties,
+			ArrayList<Texture> textures,
+			ArrayList<Colour> colours,			
+			ArrayList<Taste> tastes,
+			ArrayList<Smell> smells,
+			Boolean vegetarian) {
 		super();
 		this.name = name;
-		Pasturized = pasturized;
+		this.pasturized = pasturized;
+		this.Vegetarian =vegetarian;
+		this.animals = animals;
 		this.textures = textures;
 		this.varieties = varieties;
 		this.countries = countries;
@@ -147,7 +159,7 @@ public class Cheese implements Comparable<Cheese>{
 	
 	public String toString(){
 		String s="\n\n"+name;
-		s+="\npasturized"+this.Pasturized
+		s+="\npasturized"+this.pasturized
 		+"\ncountries :"+this.countries.toString()
 		+"\ntextures :"+this.textures.toString()
 		+"\nvarieties :"+this.varieties.toString()

@@ -1,7 +1,7 @@
 package globals;
 
 public class Attributes {
-	public static enum Pasturzied{yes,no}
+	public static enum Pasturized{yes,no,both}
 	public static enum Variety{fresh_firm,medium_firm,whey,hard,soft,semi_hard,semi_soft,artisan,soft_ripened,brined,processed,smear_ripened,blue_veined}
 	public static enum Texture{compact,crumbly,elastic,springy,smooth,chewy,dense,grainy,supple}
 	public static enum Country{netherlands,england,great_britan,france,italy,greece,united_states,india,united_kingdom,ireland,finland,catalonia,mexico,norway,germany,belgium,sweden,canada}
