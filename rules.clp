@@ -67,6 +67,71 @@
 	 )
 	(printout t "         new value"?Acc crlf)
 )
+;; VA variety --------------------------------------------------------------------------
+(defrule cheese-variety
+	(VA ?userVariety)
+	?f<-(cheese-data (name ?cheeseName)(texture $?cheeseVariety)(variety-check no)(accuracy ?Acc))
+=>	
+	(printout t ?cheeseName crlf)
+	(printout t ?userVariety"   "$?cheeseVariety crlf)
+	(printout t "old value"?Acc )
+	(if    (member ?userVariety $?cheeseVariety)
+	 then 
+		 (bind ?Acc (+ 5 ?Acc))
+		 (modify  ?f (accuracy ?Acc)(variety-check yes))
+	 )
+	(printout t "         new value"?Acc crlf)
+)
+;; CR color --------------------------------------------------------------------------
+(defrule cheese-colour
+	(CR ?userColour)
+	?f<-(cheese-data (name ?cheeseName)(texture $?cheeseColour)(color-check no)(accuracy ?Acc))
+=>	
+	(printout t ?cheeseName crlf)
+	(printout t ?userColour"   "$?cheeseColour crlf)
+	(printout t "old value"?Acc )
+	(if    (member ?userColour $?cheeseColour)
+	 then 
+		 (bind ?Acc (+ 5 ?Acc))
+		 (modify  ?f (accuracy ?Acc)(colour-check yes))
+	 )
+	(printout t "         new value"?Acc crlf)
+)
+
+
+;; FL flavor --------------------------------------------------------------------------
+(defrule cheese-flavor
+	(FL ?userFlavor)
+	?f<-(cheese-data (name ?cheeseName)(texture $?cheeseFlavor)(flavor-check no)(accuracy ?Acc))
+=>	
+	(printout t ?cheeseName crlf)
+	(printout t ?userFlavor"   "$?cheeseFlavor crlf)
+	(printout t "old value"?Acc )
+	(if    (member ?userFlavor $?cheeseFlavor)
+	 then 
+		 (bind ?Acc (+ 5 ?Acc))
+		 (modify  ?f (accuracy ?Acc)(flavor-check yes))
+	 )
+	(printout t "         new value"?Acc crlf)
+)
+
+;; AR aroma --------------------------------------------------------------------------
+(defrule cheese-flavor
+	(AR ?userAroma)
+	?f<-(cheese-data (name ?cheeseName)(texture $?cheeseAroma)(flavor-check no)(accuracy ?Acc))
+=>	
+	(printout t ?cheeseName crlf)
+	(printout t ?userAroma"   "$?cheeseAroma crlf)
+	(printout t "old value"?Acc )
+	(if    (member ?userAroma $?cheeseAroma)
+	 then 
+		 (bind ?Acc (+ 5 ?Acc))
+		 (modify  ?f (accuracy ?Acc)(aroma-check yes))
+	 )
+	(printout t "         new value"?Acc crlf)
+)
+
+
 
 
 (defrule test-facts
