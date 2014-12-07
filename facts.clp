@@ -23,7 +23,7 @@
 	(texture compact crumbly)
 	(color pale-yellow)
 	(flavor creamy sharp)
-	(aroma -)
+	(aroma unknown)
 	(vegetarian no))
 
 
@@ -102,7 +102,7 @@
 	(texture firm)
 	(color pale-yellow)
 	(flavor nutty sweet)
-	(aroma -)
+	(aroma unknown)
 	(vegetarian yes))
 
 
@@ -139,8 +139,8 @@
 	(texture creamy crumbly)
 	(color white)
 	(flavor sweet)
-	(aroma -)
-	(vegetarian n-))
+	(aroma unknown)
+	(vegetarian unknown))
 
 	(cheese-data 
 	(name swaledale)
@@ -200,7 +200,7 @@
 	(color white)
 	(flavor spicy)
 	(aroma pungent)
-	(vegetarian -))
+	(vegetarian unknown))
 
 	(cheese-data 
 	(name romano)
@@ -235,7 +235,7 @@
 	(texture creamy)
 	(color straw)
 	(flavor creamy mild)
-	(aroma -)
+	(aroma unknown)
 	(vegetarian no))
 
 	(cheese-data 
@@ -283,7 +283,7 @@
 	(texture creamy smoothe)
 	(color pale-yellow)
 	(flavor buttery creamy)
-	(aroma -)
+	(aroma unknown)
 	(vegetarian no))
 
 	(cheese-data 
@@ -308,7 +308,7 @@
 	(color yellow)
 	(flavor spicy strong tangy)
 	(aroma aromatic pleasant)
-	(vegetarian -))
+	(vegetarian unknown))
 
 
 	(cheese-data 
@@ -321,7 +321,7 @@
 	(color golden-orange)
 	(flavor mild nutty spicy strong tangy)
 	(aroma strong sweet)
-	(vegetarian -))
+	(vegetarian unknown))
 
 	(cheese-data 
 	(name adelost)
@@ -417,7 +417,7 @@
 	(color pale-yellow)
 	(flavor mild savoury sharp)
 	(aroma pungent)
-	(vegetarian -))
+	(vegetarian unknown))
 	
 	(cheese-data 
 	(name applewood)
