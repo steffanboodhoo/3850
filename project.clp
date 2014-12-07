@@ -1,16 +1,34 @@
 (deftemplate cheese-data
 	(slot name)
 	(multislot pasturized)
+	(slot pasturized-check
+		(default no))
 	(multislot milk-source)
+	(slot milk-source-check
+		(default no))
 	(multislot country)
+	(slot country-check
+		(default no))
 	(multislot variety)
+	(slot variety-check
+		(default no))
 	(multislot texture)
+	(slot texture-check
+		(default no))
 	(multislot color)
+	(slot color-check
+		(default no))
 	(multislot flavor)
+	(slot flavor-check
+		(default no))
 	(multislot aroma)
+	(slot aroma-check
+		(default no))
 	(multislot vegetarian)
+	(slot vegetarian-check
+		(default no))
 	(slot accuracy
-		(type NUMBER)
+		(type INTEGER)
 		(default 0))
 )
 

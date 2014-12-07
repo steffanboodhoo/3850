@@ -1,21 +1,7 @@
-(deftemplate cheese-data
-	(slot name)
-	(multislot pasturized)
-	(multislot milk-source)
-	(multislot country)
-	(multislot variety)
-	(multislot texture)
-	(multislot color)
-	(multislot flavor)
-	(multislot aroma)
-	(multislot vegetarian)
-	(slot accuracy
-		(type NUMBER)
-		(default 0))
-)
+
 
 (deffacts cheeses
- (cheese-data 
+	(cheese-data 
 	(name gouda)
 	(pasturized yes no)
 	(milk-source cow goat sheep)
@@ -28,7 +14,7 @@
 	(vegetarian no))
 
 
- (cheese-data 
+ 	(cheese-data 
 	(name cheddar)
 	(pasturized yes)
 	(milk-source cow)
@@ -41,7 +27,7 @@
 	(vegetarian no))
 
 
- (cheese-data 
+ 	(cheese-data 
 	(name brie)
 	(pasturized no)
 	(milk-source cow)
@@ -54,7 +40,7 @@
 	(vegetarian no))
 
 
- (cheese-data 
+ 	(cheese-data 
 	(name parmesean)
 	(pasturized no)
 	(milk-source cow)
@@ -67,7 +53,7 @@
 	(vegetarian no))
 
 
- (cheese-data 
+ 	(cheese-data 
 	(name asiago)
 	(pasturized no)
 	(milk-source cow)
@@ -93,7 +79,7 @@
 	(vegetarian no))
 
 
- (cheese-data 
+	 (cheese-data 
 	(name mascarpone)
 	(pasturized yes)
 	(milk-source cow)
@@ -107,7 +93,7 @@
 
 
 
-	 (cheese-data 
+	(cheese-data 
 	(name swiss)
 	(pasturized yes)
 	(milk-source cow)
