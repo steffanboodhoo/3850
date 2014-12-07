@@ -1,26 +1,3 @@
-(assert (cheese-data 
-	(name gouda)
-	(pasturized yes no)
-	(milk-source cow goat sheep)
-	(country netherlands)
-	(variety semi-hard artisan)
-	(texture compact crumbly dense springy)
-	(color yellow)
-	(flavor creamy full-flavoured nutty sweet)
-	(aroma pungent)
-	(vegetarian no))
-)
-
-;checking to see if the value is contained since $? means 0 or more
-
-
-(defrule cheese-test
-	(cheese-data(name ?names) (pasturized ?pasturized))
-=>
-	(printout t $?names" "$?pasturized crlf crlf)
-)
-
-;;UP Pasturized value, MS milk source value
 
 ;;UP pasturized ----------------------------------------------------------------------------
 (defrule cheese-pasturized
@@ -131,29 +108,33 @@
 	(printout t "         new value"?Acc crlf)
 )
 
-
-
-
-(defrule test-facts
-	(UP ?userPass)
-=>
-	(printout t ?userPass "value" crlf)
+;; CTY country --------------------------------------------------------------------------
+(defrule cheese-country
+	(AR ?userCountry)
+	?f<-(cheese-data (name ?cheeseName)(texture $?cheeseCountry)(country-check no)(accuracy ?Acc))
+=>	
+	(printout t ?cheeseName crlf)
+	(printout t ?userCountry"   "$?cheeseCountry crlf)
+	(printout t "old value"?Acc )
+	(if    (member ?userCountry $?cheeseCountry)
+	 then 
+		 (bind ?Acc (+ 5 ?Acc))
+		 (modify  ?f (accuracy ?Acc)(country-check yes))
+	 )
+	(printout t "         new value"?Acc crlf)
 )
-
-(defrule make-bad-buys
- ?prospect <- (prospect (name $?name)
-(assets rich)
- (age ?months))
-=>
- (printout t "Prospect: " ?name crlf ; Note: not ?name 
- 			"rich" crlf ?months 
- 			" months old" crlf crlf)
- (modify ?prospect (assets poor)))
-
-
-
-(defrule bye-bye
- ?bad-prospect <- (prospect (assets poor) (name ?name))
-=>
- (retract ?bad-prospect)
- (printout t "bye-bye " ?name crlf))
+;; VEG vegetarian --------------------------------------------------------------------------
+(defrule cheese-vegetarian
+	(AR ?userCountry)
+	?f<-(cheese-data (name ?cheeseName)(texture $?cheeseVegetarian)(vegetarian-check no)(accuracy ?Acc))
+=>	
+	(printout t ?cheeseName crlf)
+	(printout t ?userVegetarian"   "$?cheeseVegetarian crlf)
+	(printout t "old value"?Acc )
+	(if    (member ?userVegetarian $?cheeseVegetarian)
+	 then 
+		 (bind ?Acc (+ 5 ?Acc))
+		 (modify  ?f (accuracy ?Acc)(vegetarian-check yes))
+	 )
+	(printout t "         new value"?Acc crlf)
+)
