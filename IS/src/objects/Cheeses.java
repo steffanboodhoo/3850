@@ -81,13 +81,27 @@ public class Cheeses {
 		
 		animals.add(Animal.cow);
 		countries.add(Country.italy);
-		varieties.add(Variety.hard);varieties.add(Variety.artisan);
-		textures.add(Texture.dense);textures.add(Texture.grainy);
-		colours.add(Colour.straw);
-		tastes.add(Taste.fruity);tastes.add(Taste.nutty);tastes.add(Taste.savoury);tastes.add(Taste.sharp);
-		smells.add(Smell.strong);
+		varieties.add(Variety.hard);
+		textures.add(Texture.compact);textures.add(Texture.crumbly);textures.add(Texture.open);textures.add(Texture.smoothe);
+		colours.add(Colour.yellow);
+		tastes.add(Taste.full_flavoured);tastes.add(Taste.mild);tastes.add(Taste.milky);tastes.add(Taste.sharp);
+		smells.add(Smell.pungent);
 
 		c=new Cheese("asiago", Pasturized.no,animals, countries,varieties,textures,colours,tastes,smells,false);
+		Main.cheeses.add(c);
+
+		//_______________________________________________________________________________________
+		smells=new ArrayList<Smell>();tastes=new ArrayList<Taste>();varieties=new ArrayList<Variety>();textures=new ArrayList<Texture>();countries=new ArrayList<Country>();colours=new ArrayList<Colour>();animals=new ArrayList<Animal>();
+		
+		animals.add(Animal.goat);animals.add(Animal.sheep);
+		countries.add(Country.greece);
+		varieties.add(Variety.soft);varieties.add(Variety.brined);
+		textures.add(Texture.creamy);textures.add(Texture.crumbly);textures.add(Texture.open);textures.add(Texture.grainy);
+		colours.add(Colour.white);
+		tastes.add(Taste.full_flavoured);tastes.add(Taste.salty);tastes.add(Taste.tangy);
+		smells.add(Smell.nutty);smells.add(Smell.strong);
+
+		c=new Cheese("feta", Pasturized.both,animals, countries,varieties,textures,colours,tastes,smells,false);
 		Main.cheeses.add(c);
 
 
