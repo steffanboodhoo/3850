@@ -33,6 +33,7 @@ public class Cheeses {
 		animals.add(Animal.cow);animals.add(Animal.sheep);animals.add(Animal.goat);
 		Cheese c=new Cheese("gouda", Pasturized.both,animals, countries,varieties,textures,colours,tastes,smells,false);
 		Main.cheeses.add(c);
+		
 		//_______________________________________________________________________________________
 		smells=new ArrayList<Smell>();tastes=new ArrayList<Taste>();varieties=new ArrayList<Variety>();textures=new ArrayList<Texture>();countries=new ArrayList<Country>();colours=new ArrayList<Colour>();animals=new ArrayList<Animal>();
 		
@@ -102,6 +103,76 @@ public class Cheeses {
 		smells.add(Smell.nutty);smells.add(Smell.strong);
 
 		c=new Cheese("feta", Pasturized.both,animals, countries,varieties,textures,colours,tastes,smells,false);
+		Main.cheeses.add(c);
+
+		//_______________________________________________________________________________________
+		smells=new ArrayList<Smell>();tastes=new ArrayList<Taste>();varieties=new ArrayList<Variety>();textures=new ArrayList<Texture>();countries=new ArrayList<Country>();colours=new ArrayList<Colour>();animals=new ArrayList<Animal>();
+		
+		animals.add(Animal.cow);
+		countries.add(Country.italy);
+		varieties.add(Variety.soft);varieties.add(Variety.processed);
+		textures.add(Texture.creamy);textures.add(Texture.smoothe);textures.add(Texture.spreadable);
+		colours.add(Colour.white);
+		tastes.add(Taste.buttery);tastes.add(Taste.creamy);tastes.add(Taste.mild);tastes.add(Taste.milky);
+		smells.add(Smell.fresh);
+
+		c=new Cheese("mascarpone", Pasturized.yes,animals, countries,varieties,textures,colours,tastes,smells,true);
+		Main.cheeses.add(c);
+
+		//_______________________________________________________________________________________
+		smells=new ArrayList<Smell>();tastes=new ArrayList<Taste>();varieties=new ArrayList<Variety>();textures=new ArrayList<Texture>();countries=new ArrayList<Country>();colours=new ArrayList<Colour>();animals=new ArrayList<Animal>();
+		
+		animals.add(Animal.cow);
+		countries.add(Country.united_states);
+		varieties.add(Variety.hard);varieties.add(Variety.artisan);varieties.add(Variety.processed);
+		textures.add(Texture.firm);
+		colours.add(Colour.pale_yellow);
+		tastes.add(Taste.buttery);tastes.add(Taste.creamy);tastes.add(Taste.mild);tastes.add(Taste.milky);
+		smells.add(Smell.fresh);
+
+		c=new Cheese("swiss", Pasturized.yes,animals, countries,varieties,textures,colours,tastes,smells,true);
+		Main.cheeses.add(c);
+
+		//_______________________________________________________________________________________
+		smells=new ArrayList<Smell>();tastes=new ArrayList<Taste>();varieties=new ArrayList<Variety>();textures=new ArrayList<Texture>();countries=new ArrayList<Country>();colours=new ArrayList<Colour>();animals=new ArrayList<Animal>();
+		
+		animals.add(Animal.cow);
+		countries.add(Country.united_states);
+		varieties.add(Variety.semi_soft);
+		textures.add(Texture.creamy);textures.add(Texture.smoothe);
+		colours.add(Colour.cream);
+		tastes.add(Taste.herbaceous);tastes.add(Taste.sharp);tastes.add(Taste.spicy);
+		smells.add(Smell.aromatic);smells.add(Smell.herbal);
+
+		c=new Cheese("pepper jack", Pasturized.yes,animals, countries,varieties,textures,colours,tastes,smells,true);
+		Main.cheeses.add(c);
+
+		//_______________________________________________________________________________________
+		smells=new ArrayList<Smell>();tastes=new ArrayList<Taste>();varieties=new ArrayList<Variety>();textures=new ArrayList<Texture>();countries=new ArrayList<Country>();colours=new ArrayList<Colour>();animals=new ArrayList<Animal>();
+		
+		animals.add(Animal.cow);animals.add(Animal.waterbuffalo);
+		countries.add(Country.india);
+		varieties.add(Variety.fresh_firm);
+		textures.add(Texture.chewy);textures.add(Texture.crumbly);textures.add(Texture.firm);
+		colours.add(Colour.white);
+		tastes.add(Taste.milky);
+		smells.add(Smell.fresh);smells.add(Smell.milky);
+
+		c=new Cheese("paneer", Pasturized.yes,animals, countries,varieties,textures,colours,tastes,smells,true);
+		Main.cheeses.add(c);
+
+		//_______________________________________________________________________________________
+		smells=new ArrayList<Smell>();tastes=new ArrayList<Taste>();varieties=new ArrayList<Variety>();textures=new ArrayList<Texture>();countries=new ArrayList<Country>();colours=new ArrayList<Colour>();animals=new ArrayList<Animal>();
+		
+		animals.add(Animal.cow);animals.add(Animal.waterbuffalo);
+		countries.add(Country.united_kingdom);countries.add(Country.united_states);
+		varieties.add(Variety.soft);varieties.add(Variety.artisan);varieties.add(Variety.processed);
+		textures.add(Texture.creamy);textures.add(Texture.crumbly);
+		colours.add(Colour.white);
+		tastes.add(Taste.sweet);
+		smells.add(Smell.unknown);
+
+		c=new Cheese("cottage cheese", Pasturized.both,animals, countries,varieties,textures,colours,tastes,smells,null);
 		Main.cheeses.add(c);
 
 
